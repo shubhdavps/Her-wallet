@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC Bank - Account Statement</title>
+    <style>
+        :root {
+            --hdfc-blue: #004a8f;
+            --hdfc-red: #ed1c24;
+            --bg-gray: #f4f7f9;
+            --text-main: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 450px;
+            background: #fff;
+            border-top: 6px solid var(--hdfc-red);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 20px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .bank-logo {
+            font-weight: 900;
+            color: var(--hdfc-blue);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .user-welcome { font-size: 0.9rem; color: #666; }
+        .user-name { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-top: 4px; }
+
+        .balance-section {
+            background: var(--hdfc-blue);
+            padding: 25px 20px;
+            color: white;
+            margin: 15px;
+            border-radius: 10px;
+        }
+
+        .balance-label { font-size: 0.85rem; opacity: 0.9; }
+        .balance-amount { font-size: 2.2rem; font-weight: 700; margin: 10px 0; }
+        .account-type { font-size: 0.75rem; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; display: inline-block; }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8fbff;
+            border: 1px solid #e1e9f3;
+            border-radius: 8px;
+            margin: 0 15px 25px;
+        }
+
+        .stat-label { font-size: 0.85rem; color: #555; }
+        .stat-value { font-weight: 700; color: var(--hdfc-blue); }
+
+        .transactions { padding: 0 20px 20px; }
+        .tx-header { font-weight: 700; margin-bottom: 15px; color: var(--hdfc-blue); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+
+        .tx-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .tx-details { display: flex; flex-direction: column; }
+        .tx-title { font-weight: 600; font-size: 0.9rem; color: #222; }
+        .tx-meta { font-size: 0.75rem; color: #888; margin-top: 2px; }
+        .tx-amount { font-weight: 700; color: var(--hdfc-red); font-size: 0.95rem; white-space: nowrap; }
+
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="header">
+        <div class="bank-logo">HDFC BANK</div>
+        <div class="user-welcome">Welcome back,</div>
+        <div class="user-name">Shubham Kumar</div>
+    </div>
+
+    <div class="balance-section">
+        <div class="balance-label">Total Available Balance</div>
+        <div class="balance-amount">₹2,07,656.00</div>
+        <div class="account-type">Savings Account • XXXX 8829</div>
+    </div>
+
+    <div class="stat-item">
+        <span class="stat-label">Spend (Last 3 Months)</span>
+        <span class="stat-value">₹1,11,080</span>
+    </div>
+
+    <div class="transactions">
+        <div class="tx-header">Yesterday's Activity</div>
+        
+        <div class="tx-row">
+            <div class="tx-details">
+                <span class="tx-title">iPhone Store - Patna</span>
+                <span class="tx-meta">Purchase: iPhone 15</span>
+            </div>
+            <span class="tx-amount">-₹54,990.00</span>
+        </div>
+
+        <div class="tx-row">
+            <div class="tx-details">
+                <span class="tx-title">Pantaloons</span>
+                <span class="tx-meta">Lifestyle & Apparel</span>
+            </div>
+            <span class="tx-amount">-₹1,499.00</span>
+        </div>
+
+        <div class="tx-row">
+            <div class="tx-details">
+                <span class="tx-title">V-Mart Retail</span>
+                <span class="tx-meta">Shopping</span>
+            </div>
+            <span class="tx-amount">-₹1,234.00</span>
+        </div>
+
+        <div class="tx-row">
+            <div class="tx-details">
+                <span class="tx-title">IRCTC - Indian Railways</span>
+                <span class="tx-meta">3rd AC: Patna to Mokama</span>
+            </div>
+            <span class="tx-amount">-₹345.00</span>
+        </div>
+
+        <div class="tx-row">
+            <div class="tx-details">
+                <span class="tx-title">Bata India Ltd</span>
+                <span class="tx-meta">Footwear</span>
+            </div>
+            <span class="tx-amount">-₹384.00</span>
+        </div>
+
+        <div class="tx-row">
+            <div class="tx-details">
+                <span class="tx-title">Local Merchant</span>
+                <span class="tx-meta">Miscellaneous</span>
+            </div>
+            <span class="tx-amount">-₹120.00</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
 
